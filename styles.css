@@ -1,18 +1,114 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
-body {
-  font-family: "Playfair Display", serif;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Graduate&display=swap");
 * {
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: "Playfair Display", serif;
+}
+body p {
+  font-size: 19px;
+}
+nav {
+  display: block;
+  list-style: none;
+  height: 70px;
+  background-color: darkgray;
+  text-align: center;
+  text-decoration: none;
+}
+nav h1 {
+  color: white;
+  font-family: "Graduate", cursive;
+  float: left;
+  padding: 20px;
+  text-shadow: 3px 3px 5px black;
+}
+nav a {
+  text-decoration: none;
+  color: white;
+}
+nav a:hover {
+  color: black;
+  text-shadow: 3px 3px 5px white;
+}
+nav a:visited {
+  color: white;
+}
+nav ul {
+  display: inline-block;
+  padding: 20px;
+  text-align: center;
+}
+
+.topnav2 {
+  text-align: center;
+  display: inline-block;
+  margin-top: 50px;
+  margin-left: 50px;
+  height: 50px;
+  background-color: gray;
+  color: white;
+  width: 1100px;
+  text-decoration: none;
+  list-style: none;
+}
+
+.sidenav {
+  width: 300px;
+  height: 520px;
+  background-color: black;
+  border: solid 10px black;
+  float: right;
+  margin-right: 10px;
+  margin-top: 150px;
+}
+.sidenav a {
+  margin: 0 auto;
+  text-decoration: none;
+  color: white;
+}
+.sidenav ul {
+  padding: 18px;
+  text-align: center;
+}
+.sidenav a:hover {
+  color: gray;
+}
+.topnav2 a {
+  color: white;
+  text-decoration: none;
+  padding: 0px 5px 5px 0px;
+}
+
+.topnav2 a:visited {
+  color: white;
+}
+.topnav2 a:hover {
+  color: black;
+  transition: 0.2s;
+}
+
+.topnav2 ul {
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px;
+  text-align: center;
+}
+.box {
+  background-color: black;
+  width: 10px;
+  height: 70px;
+  display: inline-block;
 }
 
 .article1 {
   float: left;
   width: 600px;
   margin-top: 10px;
-  margin-left: 115px;
+  margin-left: 50px;
   height: 600px;
   background-color: white;
   border: solid black 10px;
@@ -21,14 +117,14 @@ body {
 .article2 {
   display: inline-block;
   margin-top: 10px;
-  margin-left: 30px;
+  margin-left: 10px;
   width: 400px;
   height: 600px;
   background-color: white;
   border: solid black 10px;
 }
 .image1 {
-  background: black;
+  background-color: black;
   background-repeat: none;
   margin: 20px 20px 10px 20px;
   width: 550px;
@@ -48,11 +144,34 @@ body {
   width: 550px;
   height: 250px;
   margin: 20px;
+  overflow: scroll;
 }
-
+.text p {
+  columns: 2;
+  column-width: 50%;
+  padding: 10px;
+  padding-top: 20px;
+}
+.text h1 {
+  text-align: center;
+}
 .text2 {
   margin: 10px 0 0 10px;
   background-color: gray;
   width: 375px;
-  height: 320px;
+  height: 310px;
+  overflow: scroll;
+}
+.text2 p {
+  padding: 10px;
+  text-align: center;
+}
+.text2 h2 {
+  text-align: center;
+}
+.sidemenu {
+  width: 300px;
+  height: 600px;
+  background-color: black;
+  display: inline-block;
 }
