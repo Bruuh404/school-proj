@@ -1,177 +1,169 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Graduate&display=swap");
+@import url(https://www.flaticon.com/free-icon-font/search_3917754);
+@import url("https://fonts.googleapis.com/css2?family=Inknut+Antiqua&display=swap");
 * {
   margin: 0;
-  padding: 0;
 }
 
 body {
-  font-family: "Playfair Display", serif;
-}
-body p {
-  font-size: 19px;
-}
-nav {
-  display: block;
-  list-style: none;
-  height: 70px;
-  background-color: darkgray;
-  text-align: center;
-  text-decoration: none;
-}
-nav h1 {
-  color: white;
-  font-family: "Graduate", cursive;
-  float: left;
-  padding: 20px;
-  text-shadow: 3px 3px 5px black;
-}
-nav a {
-  text-decoration: none;
-  color: white;
-}
-nav a:hover {
-  color: black;
-  text-shadow: 3px 3px 5px white;
-}
-nav a:visited {
-  color: white;
-}
-nav ul {
-  display: inline-block;
-  padding: 20px;
-  text-align: center;
+  font-family: "Inknut Antiqua", serif;
 }
 
-.topnav2 {
-  text-align: center;
-  display: inline-block;
-  margin-top: 50px;
-  margin-left: 50px;
-  height: 50px;
-  background-color: gray;
-  color: white;
-  width: 1100px;
-  text-decoration: none;
-  list-style: none;
+.layout {
+  display: grid;
+  gap: 10px;
+  grid-template-areas:
+    "header header header"
+    "mini mini .";
 }
-
-.sidenav {
-  width: 300px;
-  height: 520px;
+.mainlayout {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  grid-template-areas:
+    "cont consmall siding"
+    "cont consmall siding";
+}
+hr .divide {
+  visibility: hidden;
   background-color: black;
-  border: solid 10px black;
-  float: right;
-  margin-right: 10px;
-  margin-top: 150px;
+  width: 100px;
 }
-.sidenav a {
-  margin: 0 auto;
-  text-decoration: none;
+.header {
+  grid-area: header;
+  background-color: black;
   color: white;
+  display: grid;
+  width: 100%;
+  padding: 5px;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 0.6fr 2fr;
 }
-.sidenav ul {
-  padding: 18px;
-  text-align: center;
-}
-.sidenav a:hover {
+
+.header a:hover {
   color: gray;
+  transition: 1s;
 }
-.topnav2 a {
+.header i {
+  padding: 0px 0px 12.5px 0px;
+}
+.header a {
   color: white;
   text-decoration: none;
-  padding: 0px 5px 5px 0px;
+  transition: 1s;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+iframe {
+  width: 100%;
+  height: 100%;
+}
+.sidebar {
+  grid-area: siding;
+  text-align: center;
+  background-color: transparent;
+}
+.sidebar hr {
+  visibility: hidden;
+  background-color: transparent;
+  border-color: transparent;
+  transition: 1s;
 }
 
-.topnav2 a:visited {
-  color: white;
-}
-.topnav2 a:hover {
+.sidebar a {
+  text-decoration: none;
   color: black;
-  transition: 0.2s;
+  transition: 1s;
+}
+.sidebar a hr {
+  max-width: 50px;
+  margin: 0 auto;
+}
+.sidebar a:hover {
+  transition: 1s;
+  text-shadow: 3px 3px 5px darkgray;
+}
+.sidebar a:hover hr {
+  transition: 1s;
+  visibility: visible;
+  border-color: black;
 }
 
-.topnav2 ul {
-  display: inline-block;
+.content {
+  border: 10px solid rgba(255, 255, 255, 0.5);
+  transition: 1s;
+  grid-area: cont;
+  display: grid;
+  margin: 0px 0px 0px 10px;
+  gap: 10px;
+  max-height: 700px;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "image image"
+    "txt txt";
+}
+
+.content:hover,
+.contentsmall:hover {
+  border: solid 10px black;
+  border-radius: 10px;
+  transition: 1s;
+}
+.contentsmall {
+  border: 10px solid rgba(255, 255, 255, 0.5);
+  transition: 1s;
+  grid-area: consmall;
+  display: grid;
+  gap: 10px;
+  max-height: 700px;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "image image"
+    "txt txt";
+}
+
+.image {
+  grid-area: image;
+  background-color: transparent;
+  max-height: 500px;
+}
+.text,
+.textspecial {
+  grid-area: txt;
+  background-color: transparent;
+  padding: 10px;
+  overflow: scroll;
+}
+.header2 {
+  width: 850px;
+  grid-area: mini;
+  display: grid;
+  background-color: black;
+  align-self: center;
+  margin: 10px 0px 0px 75px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.header2 a {
   text-decoration: none;
-  padding: 12px;
-  text-align: center;
+  color: white;
+  padding: 0px 0px 0px 20px;
+  transition: 1s;
 }
-.box {
-  background-color: black;
-  width: 10px;
-  height: 70px;
-  display: inline-block;
-}
-
-.article1 {
-  float: left;
-  width: 600px;
-  margin-top: 10px;
-  margin-left: 50px;
-  height: 600px;
-  background-color: white;
-  border: solid black 10px;
+.header2 a:hover {
+  color: gray;
+  transition: 1s;
 }
 
-.article2 {
-  display: inline-block;
-  margin-top: 10px;
-  margin-left: 10px;
-  width: 400px;
-  height: 600px;
-  background-color: white;
-  border: solid black 10px;
+.logo {
+  width: 75%;
+  margin: auto 20px;
 }
-.image1 {
-  background-color: black;
-  background-repeat: none;
-  margin: 20px 20px 10px 20px;
-  width: 550px;
-  height: 300px;
-  background-size: 550px 300px;
+.layout hr {
+  visibility: hidden;
+  height: 100px;
+}
+.header i {
+  align-self: center;
 }
 
-.image2 {
-  background: red;
-  margin: 20px 20px 10px 10px;
-  width: 93.5%;
-  height: 250px;
-}
-
-.text {
-  background-color: gray;
-  width: 550px;
-  height: 250px;
-  margin: 20px;
-  overflow: scroll;
-}
-.text p {
-  columns: 2;
-  column-width: 50%;
-  padding: 10px;
-  padding-top: 20px;
-}
-.text h1 {
-  text-align: center;
-}
-.text2 {
-  margin: 10px 0 0 10px;
-  background-color: gray;
-  width: 375px;
-  height: 310px;
-  overflow: scroll;
-}
-.text2 p {
-  padding: 10px;
-  text-align: center;
-}
-.text2 h2 {
-  text-align: center;
-}
-.sidemenu {
-  width: 300px;
-  height: 600px;
-  background-color: black;
-  display: inline-block;
-}
+/*FONT: INKNUT ANTIQUA*/
