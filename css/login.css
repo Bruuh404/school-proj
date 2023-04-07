@@ -1,0 +1,73 @@
+.layoutlogin /*This defines the grid layout I want for the navbar. The reason I didn't use the other one was because the other one also includes a layout for the mini navbar, but this page doesn't use a mini navbar so therefore I can't use that*/ {
+  display: grid; /*This specifies that I am using the grid system*/
+  grid-template-areas: "header header header"; /*This defines that I want the whole top to be covered by the navbar*/
+}
+
+.invis /*This is a class specifically made for big invisible lines, which is used to center the content within the visible square*/ {
+  visibility: hidden; /*This hides the lines so it doesn't look disgusting aesthetically*/
+  height: 100px; /*This makes it tall enough to center the content*/
+}
+
+.squares /*Every div with this class will be effected by this, meaning that the three squares will be effected by this*/ {
+  display: grid; /*I define that I want to make another grid system*/
+  grid-template-columns: 1fr 1fr 1fr; /*I define that I want the squares' widths to be equally divided by 3. So one square takes 33% of the screen's width*/
+}
+.square /*This is the visible square*/ {
+  background-color: black; /*I want the color of the box itself to be white*/
+  color: white; /*I want the color of the text to be white*/
+  width: 100%; /*I want it to take up the width of the whole fraction*/
+  border: 3px black solid; /*On top of that, I want a small border to make sure that the input fields aren't aesthetically on the edge of the box*/
+  height: 500px; /*I want it to bee 500px tall*/
+  text-align: center; /*I want the text to be centered*/
+  border-radius: 20px; /*I want it to have rounded edges, making them quite round, removing 20px*/
+  transition: 1s; /*Whenever I stop hovering over the square, I want it to go back to having 20px on the border-radius and I want it to take one second*/
+}
+.square:hover /*This will effect the visible square when I'm hovering over it*/ {
+  border-radius: 10px; /*I want the border-radius to be less visible, by making the value lower*/
+  transition: 1s; /*I want it to take a second to transition into the new border-radius*/
+}
+
+.squareinvis /*This is for the invisible squares*/ {
+  background-color: transparent; /*While the square would still be invisible even if I didn't set the background color, I am making sure that it always stays like this incase some code in the future would interfere with this*/
+  width: 100%; /*I want the squares to stretch out to their whole widths of their fractions */
+}
+
+input[type="text"],
+input[type="password"] /*These work exactly like refering to a class within an element, just that it looks a bit different*/ {
+  width: 50%; /*I want the input fields to be half the width of the square's width*/
+  border-radius: 20px; /*I want the input boxes to have rounded off values, with the value being 20px*/
+  padding: 12px 20px; /*I want the text/placeholder to not be on the edges of the box, making it look much nicer*/
+  border: 1px solid #ccc; /*This is a very small border, but it is very useful to remove the ugly pre-made border that comes if you don't change it*/
+  transition: 1s; /*This defines that whenever I stop hovering over the input fields, it transitions back to this taking exactly one second to do that*/
+}
+
+input[type="text"]:hover,
+input[type="password"]:hover /*These work exactly like refering to a class with an element and telling it to do something special to hover, just that it looks a bit different. So whenever I hover over the input fields I want it to do the following*/ {
+  background-color: lightgray; /*I want the background color to fade into a light gray color, making it look that you selected just that and you're active on it*/
+  border-radius: 10px; /*I want the border-radius to decrease, to add more to the fact that the web page understands that you're specifically on that input field*/
+  border: 1px solid #ccc; /*This is a very small border, but it is very useful to remove the ugly pre-made border that comes if you don't change it*/
+  transition: 1s; /*I want it to take one second for all of these changes to take effect, making it fade and animate too*/
+}
+
+button  /*This will have effect on any kind of button placed in the log in page*/ {
+  font-family: "Inknut Antiqua", serif; /*I set the font for the text in the button to be the same as the rest. I needed to specify it for the button, otherwise it wouldn't work*/
+  background-color: white; /*I want the background color of the button to be white*/
+  color: black; /*I wanted the text to be black*/
+  border: none; /*I wanted to remove the border completely, making it look more modern*/
+  transition: 1s; /*I want it to take one second to transition back to these lines of code whenever I stop hovering*/
+  width: 80px; /*I want it to be 80px wide, making it a rectangle shape*/
+  height: 40px; /*I want it to be 40px tall, making it a rectangle shape*/
+  border-radius: 10px; /*I want it to have a small border radius of 10px*/
+  text-align: center; /*I want the text in the button to be in the middle*/
+}
+
+button:hover /*Whenever I hover over any button, it will take effect and make these changes*/ {
+  background-color: gray; /*The background color changes to a gray color*/
+  border-radius: 5px; /*The border radius decreases by half, to make sure that you know that you're about to press the button*/
+  transition: 1s; /*It takes one second to make these changes*/
+}
+
+.invismall /*this is another class for another horizontal rule. It is to give space between the password input field and the login button.*/ {
+  height: 30px; /*This defines the height of the horizontal rule, in other terms I want the space between the button and the input field to be around 30px long, with some margin/padding to give or take*/
+  visibility: hidden; /*This makes the horizontal rule invisible*/
+}

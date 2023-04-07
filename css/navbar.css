@@ -1,0 +1,42 @@
+.navbar  /*This will change the style of the navbar I have on every page*/ {
+  grid-area: header; /*For the layout of the navbars/navbar, I defined this class as "header"*/
+  background-color: black; /*I made the background color black*/
+  color: white; /*I made the text color white*/
+  display: grid; /*I told it that I want to construct another grid system within the navbar*/
+  padding: 5px; /*I want the padding between everything to be 5px*/
+  grid-template-columns: 1fr 1fr 0.5fr 1fr 1fr 1fr 0.5fr 1fr; /*I have divided the different spaces for the text and the logos based on how long the title of the linked texts are so that it looks evenly and properly spaced between each and doesn't look messed up*/
+  text-align: center; /*This aligns all the texts so it looks good and not messed up*/
+}
+
+.navbar a:hover /*Whenever I hover over a text that's attached to a link in the navbar, these changes happen*/ {
+  color: gray; /*The color of the text becomes gray*/
+  transition: 1s; /*It takes a second to transition to that*/
+}
+.navbar a /*This has effect on all the linked text within the navbar. This is necessary to select specifically the anchor, otherwise it will not work*/ {
+  text-decoration: none; /*I remove the underline*/
+  color: white; /*I change the color from the preset color to white*/
+  transition: 1s; /*I want it to take one second to change into these lines of code*/
+}
+.header2 /*This is the styling for the class that is linked to the smaller navbar*/ {
+  width: 850px; /*Instead of maxing out the width, I want it to take up only a small part*/
+  grid-area: mini; /*I define it in the grid system as "mini"*/
+  display: grid; /*I say that I want another grid system for the small navbar, made for the article links*/
+  background-color: black; /*I want the background color to be black*/
+  align-self: center; /*I want everything to be centered, using "align-self: center"*/
+  margin: 10px 0px 0px 75px; /*This adds margins around the small navbar on the top and to the left to put it in the position it is viewed in the main pages*/
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /*This grid layout is for the articles within the small navbar, it's an efficient way to put them in there*/
+}
+.header2 a /*This will have effect on the links in the small navbar*/ {
+  text-decoration: none; /*I remove the underline automatically put in the linked text*/
+  color: white; /*I changed the text color to a white color*/
+  padding: 0px 0px 0px 20px; /*I added padding to the left side of the anchored text, otherwise the text will be on the edge of the border for the small navbar*/
+  transition: 1s; /*Whenever I stop hovering over the text, I want it to take exactly one second for it to transition into a white color for the text*/
+}
+.header2 a:hover /*This will have effect on the links in the small navbar whenever I hover over it*/ {
+  color: gray; /*This will change the color to gray from white*/
+  transition: 1s; /*It will take one second to change*/
+}
+
+.logo /*This will have effect on the elements linked to the class "logo". This is right now only used for the image in the main navbar*/ {
+  width: 50%; /*I have divided the width of the logo by 50%, making it very small and very well fitting into the navbar.*/
+}

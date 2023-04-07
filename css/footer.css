@@ -1,0 +1,52 @@
+footer /*This will effect the footer element*/ {
+  background-color: black; /*I want the background color to be black*/
+  margin: 50px 0px 0px; /*I want there to be space between the beginning of the footer and the end of the actual content on the website of 50px*/
+  height: auto; /*I don't want the actual height to take up more than necessary*/
+  width: 100%; /*I want the footer to cover up the whole width of it's height estate*/
+  color: white; /*I want the headers to be white*/
+  column-count: 3; /*I want three columns*/
+}
+footer h2 /*This will effect all headers of sizing 2 within the footer element*/ {
+  text-align: center; /*I want the text to be centered*/
+}
+
+footer a /*This will effect all anchor text within the footer*/ {
+  text-decoration: none; /*I want to remove the underline of the text*/
+  color: white; /*I want the anchor text to also be white*/
+  transition: 1s; /*Whenever I stop hovering over the anchor text, I want it to transition back to these lines of styling code*/
+}
+
+footer a:hover /*This will effect the anchor text within the footer whenever I hover over it*/ {
+  color: gray; /*I want the color to transition into a gray color*/
+  /*The transition is defined in "footer a:hover hr"*/
+}
+
+footer li /*This will effect the unordered list items within the footer*/ {
+  list-style: none; /*I remove the bullets that appear next to the text*/
+  text-align: center; /*This aligns the text in the middle*/
+  justify-self: center; /*This is another part of centering the text*/
+}
+
+footer hr /*This has effect on all manually added lines within the footer element*/ {
+  width: 90%; /*To make sure that they don't collide into each other and it looks ugly, I remove 10% of the width. It's way faster than having to figure out the actual values of it*/
+  margin: auto; /*This centers the lines, so they don't look out of place and they look good.*/
+}
+
+footer a hr /*This has effect on all lines that are in anchors which are in the footer elements*/ {
+  visibility: hidden; /*I want it to be hidden at first, so there's not a bunch of lines being in the way */
+  width: 0px; /*I want it to later transition into a wider line*/
+  transition: 0.5s; /*This one is faster so it seems more responsive and seems like a very fast footer. The reason I want it for here is because I feel like aesthetics is not important for the footer, as much as it is for the main page*/
+}
+
+footer a:hover hr /*whenever I hover over anchor text within the footer, something will happen to the lines*/ {
+  visibility: visible; /*They'll be visible*/
+  width: 15%; /*The width will be 15% longer*/
+  background-color: white; /*the color will be white*/
+  transition: 0.5s; /*It will take 0.5 seconds for this change to happen*/
+}
+
+.invisible /*This will have effect on the elements defined with the class "invisible". This is only used for <hr>*/ {
+  visibility: hidden; /*I want it to be invisible*/
+  height: 25px; /*I want it to be 25px long. This is to add space between the bottom of the browser and the end of the column contents*/
+  width: 100%; /*I want it to stretch out to the max, making sure that everything is on the same level*/
+}

@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Inknut+Antiqua&display=swap"); /*I have imported the "Inkut Antiqua" font from google fonts API"*/
+* /*This has effect on everything in the html page*/ {
+  margin: 0; /*I have removed all kinds of margins that were automatically put in*/
+  padding: 0; /*I have removed all kinds of paddings that were automatically put in*/
+}
+
+body /*This has effect on everything inside the html page within the body tag*/ {
+  font-family: "Inknut Antiqua", serif; /*I want all kind of text written in every page linked to this CSS to use this font*/
+}
+
+.layout /*This has effect on everything connected to the layout class in html*/ {
+  display: grid; /*This means that I am using grid system to build the layout of the navbars*/
+  grid-template-areas:
+    "header header header" /*I want the main navbar to take up the whole top, so I write header three times*/
+    "mini mini ."; /*I want the smaller navbar to only take up 2/3 of the top, so I write mini twice and a dot to indicate that I just want empty space there*/
+}
+
+.layout hr /*every line in the .layout class will be hidden and will be 100px tall*/ {
+  visibility: hidden; /*This makes it invisible/hidden*/
+  height: 100px; /*This makes it tall*/
+}
+
+.mainlayout /*This has effect on everything connected to the mainlayout class in html*/ {
+  display: grid; /*This defines that I want to use the grid system for placing out everything*/
+  grid-template-columns: 1.5fr 1fr 1fr; /*This defines how I want to divide the space/real estate on the web page. I want the big article to take up more space than I want the sidebar and small article to do*/
+  grid-template-areas: "cont consmall siding"; /*This defines specifically which classes I want to take place for each fraction. So cont=1.5fr, consmall=1fr, siding=1fr*/
+} /*This places out the big article, the small article and the sidebar on the main page. It also has a gap between each div to make it not seem so crowded */
+
+img /*This has effect on all images in html*/ {
+  width: 100%; /*I want to make sure that the image is completely stretched out as much as possible so it doesn't look so messed up*/
+  height: 100%; /*I want to make sure that the image doesn't look horrible stretching it out as much as I do on the width, to the max*/
+} /*Controls width and height of the the images in the main page*/
+
+iframe/*This has effect on everyhthing using  the iframe tag, mainly youtube videos in html*/ {
+  width: 100%; /*I want to make sure that the video is completely stretched out as much as possible so it doesn't look so messed up*/
+  height: 100%; /*I want to make sure that the video doesn't look horrible stretching it out as much as I do on the width, to the max*/
+} /*Controls the width and height of the youtube videos in the main page*/
+
+.sidebar {
+  grid-area: siding; /*Related to the .mainlayout grid-template-areas, I refer to this class as "siding" so that it knows that this class is supposed to be on the right.*/
+  text-align: center; /*I want the text to be centered in the sidebar*/
+  background-color: transparent; /*I don't want a background color that is visible so I make it invisible/transparent*/
+  justify-self: center; /*Another step to align the text in the sidebar*/
+}
+
+.sidebar hr /*I select only the hr in the sidebar class*/ {
+  visibility: hidden; /*I want them to be invisible from the beginning*/
+  width: 0px; /*I want it to start off at 0px, making it animate into a longer line*/
+  margin: 0 auto; /*I remove all the margins that the web browser put in, and center it with margin*/
+  transition: 1s; /*When the user stops hovering over the text with anchors, the hr goes back to being invisible, with the animation taking one second */
+}
+
+.sidebar a /*This has effect on every anchor text in the sidebar class*/ {
+  text-decoration: none; /*I remove the underline from the text*/
+  color: black; /*I change the color of the text to a black color*/
+  transition: 1s; /*Whenever I stop hovering over the text, it transitions back to a black colored text taking one second to transition to it*/
+}
+
+.list ul /*This has effect on every unordered list in the list class */ {
+  list-style: none; /*Removes the dots next to the anchored text, making it look like normal anchored text*/
+}
+
+.sidebar a:hover /*Whenever I hover over the anchor text in the div that has the sidebar class, that text will transition into having a very small shadow that is black*/ {
+  transition: 1s; /*This is the transition and the time it takes for it to transition (one second)*/
+  text-shadow: 7px 0px 5px black; /*This is the shadow for the text whenever you hover over it. The first value defines where the shadow is on the x-axis and the second value defines where the shadow is on the y-axis. The third value defines how "big" the shadow is going to be/how sharp it is. The lesser the value, the sharper.*/
+}
+
+.sidebar a:hover hr /*Whenever I hover over the anchor text, the line under will transition itself to be visible while growing into a line that has the width of 50px and has the color black*/ {
+  transition: 1s; /*Make sure it all takes one second to animate/transition to the new changes in here*/
+  visibility: visible; /*makes the line visible*/
+  width: 50px; /*Sets the new width*/
+  background-color: black; /*sets the color*/
+}
+
+.content /*This has effect on the content class*/ {
+  border: 10px solid rgb(255, 255, 255); /*This is an invisible border that can transition into a black border*/
+  transition: 1s; /*Whenever you stop hovering over the big articles, it transitions back to these lines of CSS*/
+  grid-area: cont; /*Related to the .mainlayout grid-template-areas, I refer to this class as "cont", defined in this line so that it knows that this class is supposed to be on the left, partially in the middle*/
+  display: grid; /*This defines that I want to use the grid system for displaying this*/
+  margin: 0px 0px 0px 10px; /*I add margin to only the left side, no where else*/
+  height: 700px; /*I want the height of the box to be 700px.*/
+  grid-template-rows: 1fr; /*This makes sure that the youtube video is not too small and is the size that I want it to be*/
+  grid-template-areas:
+    "image"
+    "txt"; /*This tells that I want the image/video to be on the top and I want the text to be under the video/image*/
+}
+
+.content:hover, /*Whenever I hover over the big and small articles, I want it to show the border by transitioning the color from white to black and also rounding the edges of the border by 10px.*/
+.contentsmall:hover {
+  border: solid 10px black; /*This makes it change color*/
+  border-radius: 10px; /*This rounds of the borders*/
+  transition: 1s; /*This is the transitioning itself of one second*/
+}
+.contentsmall /*This has effect on the contentsmall class. The reason that they're not the same is because I need to seperate the grid-areas to have them be different sizes. Otherwise they're basically identical*/ {
+  border: 10px solid rgba(255, 255, 255); /*This is an invisible border that can transition into a black border*/
+  transition: 1s; /*Whenever you stop hovering over the big articles, it transitions back to these lines of CSS*/
+  grid-area: consmall; /*Related to the .mainlayout grid-template-areas, I refer to this class as "consmall", defined in this line so that it knows that this class is supposed to be in the middle, partially to the right*/
+  display: grid; /*This defines that I want to use the grid system for displaying this*/
+  height: 700px; /*I want the height of the box to be 700px.*/
+  grid-template-rows: 1fr; /*This makes sure that the youtube video is not too small and is the size that I want it to be*/
+  grid-template-areas:
+    "image"
+    "txt"; /*This tells that I want the image/video to be on the top and I want the text to be under the video/image*/
+}
+
+.image /*This has effect on the image class and everything linked to it in html*/ {
+  grid-area: image; /*Related to  the .content and .contentsmall grid-template-areas, I refer to this class as "image", defined in this line so that it knows that this class is supposed to be in the top, where the image is.*/
+  max-height: 500px; /*Instead of saying that it has to be 500px, I'm saying that teh highest it can go is 500px, meaning that if the original image is lower than 500px, then it's okay.*/
+}
+.text /*This has effect on the text class and everything linked to it in html*/ {
+  grid-area: txt; /*Related to  the .content and .contentsmall grid-template-areas, I refer to this class as "text", defined in this line so that it knows that this class is supposed to be in the bottom, where the text is.*/
+  padding: 10px; /*I don't want the text to be closse to the border of the whole box, neither do I want it to be close to the image so I give it space all around*/
+  overflow: scroll; /*If the summary is longer than what the height of the actual div is, then you can scroll down to continue reading the summary.*/
+}
